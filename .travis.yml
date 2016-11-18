@@ -4,6 +4,9 @@ node_js:
 os:
   - linux
 sudo: required
+cache:
+  directories:
+  - $HOME/antlr4
 dist: trusty
 addons:
   apt:
