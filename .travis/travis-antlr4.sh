@@ -11,3 +11,4 @@ EOF
 else
   echo 'Using cached antlr4';
 fi
+export PATH="$HOME/antlr4/bin:$PATH"
