@@ -1,0 +1,15 @@
+language: c
+os:
+  - linux
+sudo: required
+dist: trusty
+addons:
+  apt:
+    packages:
+    - antlr4
+script:
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./.travis/build-debian.sh; fi
+notifications:
+  irc:
+    channels:
+      - "chat.freenode.net#jshdl"
