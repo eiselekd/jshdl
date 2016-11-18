@@ -1,0 +1,25 @@
+{
+  "name": "jshdl",
+  "version": "1.0.0",
+  "description": "jshdl UMD",
+  "main": "release/antlr4-sql.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eiselekd/jshdl.git"
+  },
+  "keywords": [
+    "antl4"
+  ],
+  "author": "Konrad Eisele <eiselekd@gmail.com>",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/eiselekd/jshdl/issues"
+  },
+  "homepage": "https://github.com/eiselekd/jshdl",
+  "devDependencies": {
+    "browserify": "^10.2.4"
+  },
+  "dependencies": {
+    "antlr4": "^4.5.2"
+  }
+}
