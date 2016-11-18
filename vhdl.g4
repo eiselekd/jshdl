@@ -17,6 +17,11 @@
 
 grammar vhdl;
 
+//options
+//{
+//    output=AST;
+//}
+    
 ABS: A B S;
 ACCESS : A C C E S S;
 ACROSS : A C R O S S;
