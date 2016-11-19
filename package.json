@@ -20,6 +20,6 @@
     "browserify": "^10.2.4"
   },
   "dependencies": {
-    "antlr4": "^4.6.0"
+    "antlr4": "^4.5.3"
   }
 }
