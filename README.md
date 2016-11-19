@@ -1,9 +1,9 @@
 # jshdl
 
-Convert a Antlr4 vhdl.g4 grammar to javascript via antl4 cpp target and emscripten instead of the slow javascript target.
+Convert a Antlr4 vhdl.g4 grammar to javascript via antl4 cpp target and emscripten instead of the slow antl4 javascript target.
 vhdl.g4 from https://github.com/Nic30/hdlConvertor.
 
-## antlr4 CPP target (t/simple.cpp):
+## antlr4 cpp target (t/simple.cpp):
 
     Scan 131kb iu3.vhd with *cpp* version:
 
