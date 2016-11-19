@@ -2,7 +2,7 @@
   "name": "jshdl",
   "version": "1.0.0",
   "description": "jshdl",
-  "main": "release/antlr4-sql.js",
+  "main": "main.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/eiselekd/jshdl.git"

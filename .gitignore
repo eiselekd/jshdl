@@ -1,0 +1,13 @@
+libvhdlparser.a
+vhdlparser.js
+testvhdlparser*
+*.bc
+antlr4-runtime-cpp/*js
+antlr4-runtime-cpp/*/*js
+antlr4-runtime-cpp/*/Makefile
+antlr4-runtime-cpp/*/*/*js
+lib
+lib_cpp
+node_modules
+*~
+*.bck
