@@ -8,7 +8,6 @@ vhdl.g4 from https://github.com/Nic30/hdlConvertor.
     Scan 131kb iu3.vhd with Cpp version:
 
     time ./vhdl.out t/iu3.vhd
-
     real  0m3.666s
     user  0m3.612s
     sys   0m0.048s
@@ -18,7 +17,6 @@ vhdl.g4 from https://github.com/Nic30/hdlConvertor.
     Scan 131kb iu3.vhd with antlr javascript version:
 
     time node t/simple.js
-
     real  2m26.034s
     user  2m27.348s
     sys   0m1.180s
@@ -30,7 +28,6 @@ vhdl.g4 from https://github.com/Nic30/hdlConvertor.
 emcc -O3 compiled: 13976859 bytes. Scan 131kb iu3.vhd:
 
     $time node vhdlparser.js
-
     real  0m15.864s
     user  0m15.732s
     sys   0m0.144s
@@ -38,7 +35,6 @@ emcc -O3 compiled: 13976859 bytes. Scan 131kb iu3.vhd:
 emcc -Oz compiled: 8817131 bytes. Scan 131kb iu3.vhd:
 
     $time node vhdlparser.js
-
     real  0m20.709s
-    user	 0m20.608s
-    sys	 0m0.128s
+    user  0m20.608s
+    sys	  0m0.128s
