@@ -23,7 +23,7 @@ vhdl.g4 from https://github.com/Nic30/hdlConvertor.
 
  => very slow
 
-## antlr4 CPP target converted with *emscripten* (t/simple_node.cpp):
+## antlr4 cpp target converted with *emscripten* (t/simple_node.cpp):
 
 emcc -O3 compiled: 13976859 bytes. Scan 131kb iu3.vhd:
 
