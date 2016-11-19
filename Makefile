@@ -36,4 +36,4 @@ emscripten:
 	em++ -O3 --llvm-lto 1 --memory-init-file 0 $(CFLAGS) $(LDFLAGS) testvhdlparser.bc -o "vhdlparser.js" || exit 1
 
 clean:
-	rm $(OBJ_FILES) t/simple.o libvhdlparser.a libvhdlparser.js
+	-rm $(OBJ_FILES) t/simple.o libvhdlparser.a libvhdlparser.js
