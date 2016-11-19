@@ -1,27 +1,27 @@
 all: cpp emscripten
 
 cpp:
-	g++ -O3 -I antlr4-runtime lib_cpp/vhdlParser.cpp -c -o lib_cpp/vhdlParser.o
-	g++ -O3 -I antlr4-runtime lib_cpp/vhdlLexer.cpp -c -o lib_cpp/vhdlLexer.o
-	g++ -I antlr4-runtime -I lib_cpp/ t/simple.cpp lib_cpp/vhdlParser.o lib_cpp/vhdlLexer.o t/libantlr4-runtime.a
+	g++ -O3 -I antlr4-runtime-cpp lib_cpp/vhdlParser.cpp -c -o lib_cpp/vhdlParser.o
+	g++ -O3 -I antlr4-runtime-cpp lib_cpp/vhdlLexer.cpp -c -o lib_cpp/vhdlLexer.o
+	g++ -I antlr4-runtime-cpp -I lib_cpp/ t/simple.cpp lib_cpp/vhdlParser.o lib_cpp/vhdlLexer.o t/libantlr4-runtime.a
 
 SRC_FILES= \
   $(wildcard lib_cpp/*.cpp) \
-  $(wildcard antlr4-runtime/*.cpp) \
-  $(wildcard antlr4-runtime/atn/*.cpp) \
-  $(wildcard antlr4-runtime/dfa/*.cpp) \
-  $(wildcard antlr4-runtime/misc/*.cpp) \
-  $(wildcard antlr4-runtime/support/*.cpp) \
-  $(wildcard antlr4-runtime/tree/*.cpp) \
-  $(wildcard antlr4-runtime/tree/pattern/*.cpp) \
-  $(wildcard antlr4-runtime/tree/xpath/*.cpp) \
+  $(wildcard antlr4-runtime-cpp/*.cpp) \
+  $(wildcard antlr4-runtime-cpp/atn/*.cpp) \
+  $(wildcard antlr4-runtime-cpp/dfa/*.cpp) \
+  $(wildcard antlr4-runtime-cpp/misc/*.cpp) \
+  $(wildcard antlr4-runtime-cpp/support/*.cpp) \
+  $(wildcard antlr4-runtime-cpp/tree/*.cpp) \
+  $(wildcard antlr4-runtime-cpp/tree/pattern/*.cpp) \
+  $(wildcard antlr4-runtime-cpp/tree/xpath/*.cpp) \
 
 OBJ_FILES = $(patsubst %.cpp,%.bc,$(SRC_FILES))
 JS_FILES = $(patsubst %.cpp,%.js,$(SRC_FILES))
 TOTAL_MEMORY=50000000
 LDFLAGS=-s TOTAL_MEMORY=$(TOTAL_MEMORY) -s RESERVED_FUNCTION_POINTERS=8 -s NO_DYNAMIC_EXECUTION=1 -s RUNNING_JS_OPTS=1
 
-CFLAGS=-std=c++11 -I lib_cpp -I antlr4-runtime -I antlr4-runtime/tree -s DISABLE_EXCEPTION_CATCHING=0 -s DEMANGLE_SUPPORT=1  -g -O3
+CFLAGS=-std=c++11 -I lib_cpp -I antlr4-runtime-cpp -I antlr4-runtime-cpp/tree -s DISABLE_EXCEPTION_CATCHING=0 -s DEMANGLE_SUPPORT=1  -g -O3
 
 %.bc : %.cpp
 	em++ $(CFLAGS)  $< -o $@
