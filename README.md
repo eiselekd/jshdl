@@ -29,16 +29,16 @@ vhdl.g4 from https://github.com/Nic30/hdlConvertor.
 
 emcc -O3 compiled: 13976859 bytes. Scan 131kb iu3.vhd:
 
-   $time node vhdlparser.js
+    $time node vhdlparser.js
 
-   real  0m15.864s
-   user  0m15.732s
-   sys   0m0.144s
+    real  0m15.864s
+    user  0m15.732s
+    sys   0m0.144s
 
 emcc -Oz compiled: 8817131 bytes. Scan 131kb iu3.vhd:
 
-   $time node vhdlparser.js
+    $time node vhdlparser.js
 
-   real  0m20.709s
-   user	 0m20.608s
-   sys	 0m0.128s
+    real  0m20.709s
+    user	 0m20.608s
+    sys	 0m0.128s
