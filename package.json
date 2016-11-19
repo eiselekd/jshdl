@@ -1,7 +1,7 @@
 {
   "name": "jshdl",
   "version": "1.0.0",
-  "description": "jshdl UMD",
+  "description": "jshdl",
   "main": "release/antlr4-sql.js",
   "repository": {
     "type": "git",
@@ -20,6 +20,6 @@
     "browserify": "^10.2.4"
   },
   "dependencies": {
-    "antlr4": "^4.5.2"
+    "antlr4": "^4.6.0"
   }
 }

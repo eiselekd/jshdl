@@ -4,19 +4,10 @@
 #include "vhdlParser.h"
 #include "vhdlBaseListener.h"
 
-//using namespace org::antlr::v4::runtime;
 using namespace vhdl;
-
-class TreeShapeListener : public vhdlBaseListener {
-public:
-  void enterKey(Ref<ParserRuleContext> ctx) {
-    // Do something when entering the key rule.
-  }
-};
 
 int main(int argc, const char* argv[]) {
 
-  printf("Start\n");
   std::ifstream stream;
   stream.open("iu3.vhd");
   ANTLRInputStream input(stream);
@@ -24,9 +15,7 @@ int main(int argc, const char* argv[]) {
   CommonTokenStream tokens(&lexer);
   vhdlParser parser(&tokens);
 
-  /*Ref<tree::ParseTree> tree = */ parser.design_file();
-  Ref<TreeShapeListener> listener(new TreeShapeListener());
-  //tree::ParseTreeWalker::DEFAULT->walk(listener, tree);
+  parser.design_file();
 
   return 0;
 }
