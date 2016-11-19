@@ -5,7 +5,7 @@ vhdl.g4 from https://github.com/Nic30/hdlConvertor.
 
 ## antlr4 CPP target (t/simple.cpp):
 
-    Scan 131kb iu3.vhd with Cpp version:
+    Scan 131kb iu3.vhd with *cpp* version:
 
     time ./vhdl.out t/iu3.vhd
     real  0m3.666s
@@ -14,7 +14,7 @@ vhdl.g4 from https://github.com/Nic30/hdlConvertor.
 
 ## antlr4 javascript target:
 
-    Scan 131kb iu3.vhd with antlr javascript version:
+    Scan 131kb iu3.vhd with antlr4 *javascript* version (t/simple.js):
 
     time node t/simple.js
     real  2m26.034s
@@ -23,7 +23,7 @@ vhdl.g4 from https://github.com/Nic30/hdlConvertor.
 
  => very slow
 
-## antlr4 CPP target converted with emscripten (t/simple_node.cpp):
+## antlr4 CPP target converted with *emscripten* (t/simple_node.cpp):
 
 emcc -O3 compiled: 13976859 bytes. Scan 131kb iu3.vhd:
 
