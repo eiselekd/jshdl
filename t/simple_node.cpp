@@ -3,6 +3,7 @@
 #include "vhdlLexer.h"
 #include "vhdlParser.h"
 #include "vhdlBaseListener.h"
+#include <emscripten/emscripten.h>
 
 //using namespace org::antlr::v4::runtime;
 using namespace vhdl;
@@ -16,16 +17,20 @@ public:
 
 int main(int argc, const char* argv[]) {
 
-  printf("Start\n");
+  EM_ASM(
+    FS.mkdir('/working');
+    FS.mount(NODEFS, { root: '.' }, '/working');
+  );
+
   std::ifstream stream;
-  stream.open("iu3.vhd");
+  stream.open("/working/t/iu3.vhd");
   ANTLRInputStream input(stream);
   vhdlLexer lexer(&input);
   CommonTokenStream tokens(&lexer);
   vhdlParser parser(&tokens);
 
   /*Ref<tree::ParseTree> tree = */ parser.design_file();
-  Ref<TreeShapeListener> listener(new TreeShapeListener());
+  //Ref<TreeShapeListener> listener(new TreeShapeListener());
   //tree::ParseTreeWalker::DEFAULT->walk(listener, tree);
 
   return 0;
