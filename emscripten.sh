@@ -4,3 +4,4 @@ wget https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.t
 tar xvf emsdk-portable.tar.gz
 cd emsdk-portable
 ./emsdk install latest
+./emsdk activate latest
