@@ -2,6 +2,7 @@ libvhdlparser.a
 vhdlparser.js
 testvhdlparser*
 *.bc
+vhdl.out
 antlr4-runtime-cpp/*js
 antlr4-runtime-cpp/*/*js
 antlr4-runtime-cpp/*/Makefile
